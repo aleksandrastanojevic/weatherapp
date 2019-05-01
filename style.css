@@ -78,9 +78,8 @@ table {
 
 #currentTemp {
     font-size: 32px;
+    padding-top: 8px;
 }
-
-
 
 span {
     width: 200px;
