@@ -67,7 +67,7 @@ table {
 }
 
 tr:last-child >td{
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 #weatherIcon {
@@ -82,7 +82,7 @@ tr:last-child >td{
 
 #currentTemp {
     font-size: 32px;
-    padding-top: 8px;
+    padding-top: 10px;
 }
 
 span {
