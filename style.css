@@ -66,6 +66,10 @@ table {
     justify-content: center;
 }
 
+tr:last-child >td{
+    padding-top: 20px;
+}
+
 #weatherIcon {
     display: flex;
     width: 150px;
