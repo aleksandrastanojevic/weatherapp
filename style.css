@@ -15,6 +15,7 @@ body {
     background-position-x: center;
     background-size: cover;
     min-height: 100vh;
+    min-width: 25vw;
 }
 
 .container {
@@ -111,5 +112,6 @@ span {
         flex-direction: column;
         justify-content: center;
         min-height: 100vh;
+        min-width: 25vw;
     }
 }
