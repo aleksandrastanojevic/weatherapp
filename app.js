@@ -5,14 +5,14 @@ document.getElementById("weather").addEventListener("click", function () {
             //koordinate mesta
             const lat = position.coords.latitude;
             const long = position.coords.longitude;
-            getWeather(lat, long)
-        })
+            getWeather(lat, long);
+        });
     }
     //u slucaju da browser ne podrzava navigator
     else {
         window.alert("Unknown location!");
     }
-})
+});
 
 function getWeather(lat, long) {
     //api key
@@ -23,12 +23,12 @@ function getWeather(lat, long) {
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
 
-}
+};
 
 //pretvara temperaturu u celzijuse
 function toDegreeCelsius(c) {
     return Math.round((c - 32) * 5 / 9);
-}
+};
 
 window.onload = function () {
     //prikaz pre izvlacenja podataka, loader
@@ -42,7 +42,7 @@ window.onload = function () {
     precipitation = document.getElementById("precipitation");
     currentLocation = document.getElementById("currentLocation");
     summary = document.getElementById("summary");
-}
+};
 
 function showWeather(data) {
     //html elementi koje treba popuniti dinamicki
@@ -59,4 +59,4 @@ function showWeather(data) {
     document.getElementById("currentLocation").style.backgroundColor = "rgba(132, 172, 212, 0.5)";
     document.getElementById("summary").style.backgroundColor = "rgba(132, 172, 212, 0.5)";
 
-}
+};
