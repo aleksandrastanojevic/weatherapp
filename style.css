@@ -8,6 +8,7 @@
 }
 
 body {
+    margin: 1%;
     display: flex;
     justify-content: center;
     background: url("images/sky26.jpg");
