@@ -7,20 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather app</title>
     <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
 </head>
 
 <body>
 
-    <div class="container">
+    <div id="container">
 
         <p id="summary"></p>
-        <img id="weatherIcon" alt="weather" src="">
+        <img id="weatherIcon" alt="" src="">
 
-
-        <div id="currentWeather" class="currentWeather">
+        <div id="currentWeather">
 
             <table>
 
@@ -40,17 +39,20 @@
                     <td><span id="precipitation">--</span></td>
                 </tr>
                 <tr>
-                    <td><img id="temperatureIcon" alt="temp" src=""><span id="currentTemp">--</span></td>
+                    <td><img id="temperatureIcon" alt="" src=""><span id="currentTemp">--</span></td>
                 </tr>
 
             </table>
 
-            <button id="weather" class="weather">Weather app</button>
-        </div>
+            <button id="weather">Weather</button>
 
+        </div>
+        
+        <div id="weekTemperature"></div>
         <p id="currentLocation"></p>
 
     </div>
+
 
     <script src="app.js"></script>
 </body>
