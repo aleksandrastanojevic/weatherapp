@@ -44,19 +44,41 @@ window.onload = function () {
     summary = document.getElementById("summary");
 };
 
+function showWeekly(data) {
+    //prognoza za naredna 3 dana
+    const weekTemp = document.getElementById("weekTemperature");
+    const nextWeek = data.daily.data;
+    weekTemp.innerHTML = "";
+    for (let i = 1; i < 4; i++) {
+        weekTemp.innerHTML += `<div id="box">
+        <p id="days">${dayOfWeek(nextWeek[i].time)}</p>
+        <img src="images/${nextWeek[i].icon}.png" alt="" src="">
+        <p id="tempWeek">${toDegreeCelsius(nextWeek[i].temperatureLow)}°C / ${toDegreeCelsius(nextWeek[i].temperatureHigh)}°C</p>
+        </div>`
+    };
+
+}
+//datum
+function dayOfWeek(time) {
+    const a = new Date(time * 1000);
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    return days[a.getDay()]
+};
+
+
 function showWeather(data) {
     //html elementi koje treba popuniti dinamicki
     weatherIcon.src = `images/${data.currently.icon}.png`;
     humidity.innerHTML = `Humidity: ${Math.round(data.currently.humidity * 100)}%`;
     pressure.innerHTML = `Pressure: ${data.currently.pressure.toFixed()}mb`;
-    uvIndex.innerHTML = `UV Index: ${data.currently.uvIndex}`;   
+    uvIndex.innerHTML = `UV Index: ${data.currently.uvIndex}`;
     temperatureIcon.src = "images/termometer.png";
-    temperature.innerHTML = `${toDegreeCelsius(data.currently.temperature)}°C`;  
+    temperature.innerHTML = `${toDegreeCelsius(data.currently.temperature)}°C`;
     precipitation.innerHTML = `Precipitation probability: ${Math.round(data.currently.precipProbability * 100)}%`;
-    feelsLike.innerHTML = `Feels like: ${toDegreeCelsius(data.currently.apparentTemperature)}°C`;        
+    feelsLike.innerHTML = `Feels like: ${toDegreeCelsius(data.currently.apparentTemperature)}°C`;
     currentLocation.innerHTML = `Current Location: ${data.timezone}`;
     summary.innerHTML = `Weather Summary: ${data.currently.summary}`;
     document.getElementById("currentLocation").style.backgroundColor = "rgba(132, 172, 212, 0.5)";
     document.getElementById("summary").style.backgroundColor = "rgba(132, 172, 212, 0.5)";
-
+    showWeekly(data);
 };
