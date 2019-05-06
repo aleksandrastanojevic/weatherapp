@@ -13,7 +13,7 @@ body {
     justify-content: center;
     background: url("images/sky.jpg");
     background-repeat: no-repeat;
-    background-position-x: center;
+    background-position: center;
     background-size: cover;
     min-height: 100vh;
 }
@@ -57,7 +57,7 @@ body {
 
 #weather:hover {
     box-shadow: 8px 8px 15px 4px rgba(132, 172, 212, 0.5);
-    border: 3px solid rgb(255, 255, 255);
+    background-color: rgba(132, 172, 212, 0.5);
     opacity: 0.7;
 }
 
